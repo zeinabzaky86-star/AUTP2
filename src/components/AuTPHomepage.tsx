@@ -66,20 +66,36 @@ export function AuTPHomepage() {
       </section>
 
       {/* Category Chips */}
-      <section className="py-12 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <h3 className="text-2xl font-bold text-center mb-8">{t('homepage.serviceCategories')}</h3>
-          <div className="flex flex-wrap justify-center gap-4">
-            {categories.map((category) => (
-              <Link key={category} to={`/services?category=${encodeURIComponent(category)}`}>
-                <Badge variant="outline" className="text-base py-2 px-4 hover:bg-primary hover:text-primary-foreground cursor-pointer transition-colors">
-                  {category}
-                </Badge>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
+     
+{/* Category Chips */}
+<section className="py-12 bg-muted/30">
+  <div className="container mx-auto px-4">
+    <h3 className="text-2xl font-bold text-center mb-8">
+      {t('homepage.serviceCategories')}
+    </h3>
+
+    <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+      {categories.map((category) => (
+        <Link
+          key={category}
+          to={{
+            pathname: "/services",
+            search: `?category=${encodeURIComponent(category)}`,
+          }}
+          className="inline-flex"
+        >
+          <Badge
+            variant="outline"
+            className="inline-flex items-center justify-center text-sm sm:text-base py-2 px-4 hover:bg-primary hover:text-primary-foreground cursor-pointer transition-colors whitespace-nowrap"
+          >
+            {category}
+          </Badge>
+        </Link>
+      ))}
+    </div>
+  </div>
+</section>
+
 
       {/* Featured Services */}
       {featuredServices.length > 0 && (
