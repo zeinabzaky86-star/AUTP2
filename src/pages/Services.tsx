@@ -5,7 +5,7 @@ import { ServiceCard } from '@/components/services/ServiceCard';
 import { SearchAndFilters } from '@/components/services/SearchAndFilters';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, Loader2 } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { useLanguage } from '@/hooks/useLanguage';
 import Header from '@/components/Header';
 
