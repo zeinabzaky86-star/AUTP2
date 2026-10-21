@@ -22,17 +22,7 @@ export default function Services() {
   () => {
     const category = new URLSearchParams(window.location.search).get('category');
 
-    useEffect(() => {
-  const category = selectedCategories[0];
-
-  if (selectedCategories.length === 1 && category) {
-    if (searchParams.get('category') !== category) {
-      setSearchParams({ category }, { replace: true });
-    }
-  } else if (searchParams.has('category')) {
-    setSearchParams({}, { replace: true });
-  }
-}, [selectedCategories, searchParams, setSearchParams]);
+   
     return category ? [category] : [];
   }
 );
