@@ -11,6 +11,8 @@ import Header from '@/components/Header';
 
 export default function Services() {
   const { t } = useLanguage();
+  const [searchParams, setSearchParams] = useSearchParams();
+  const categoryFromUrl = searchParams.get('category');
   const [services, setServices] = useState<Service[]>([]);
   const [filteredServices, setFilteredServices] = useState<Service[]>([]);
   const [loading, setLoading] = useState(true);
