@@ -106,3 +106,12 @@ body {
   }
 }
 
+@media (max-width: 768px) {
+  .carousel-item img,
+  .slideshow img {
+    width: 100%;
+    height: 240px;
+    object-fit: contain;
+  }
+}
+
