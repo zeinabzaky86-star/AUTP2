@@ -316,3 +316,46 @@ body {
     object-fit: contain;
   }
 }
+
+
+/* Service category layout */
+.innovation-service-categories {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+
+/* Consistent icon positioning */
+.innovation-service-categories .category-icon {
+  width: 56px;
+  height: 56px;
+  flex: 0 0 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+
+.innovation-service-categories .category-icon svg {
+  display: block;
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .innovation-service-categories {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 560px) {
+  .innovation-service-categories {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+}
