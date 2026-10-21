@@ -271,6 +271,11 @@ body {
   {
     height: 200px !important;
   }
+
+  .py-20 {
+  padding-top: 5%;
+  padding-bottom: 5rem;
+}
 }
 
 @media (max-width: 768px) {
