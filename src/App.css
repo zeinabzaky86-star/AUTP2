@@ -40,3 +40,69 @@
 .read-the-docs {
   color: #888;
 }
+
+
+
+/* Responsive slideshow */
+.slideshow-container,
+.slideshow,
+.carousel,
+.carousel-inner {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Slideshow images */
+.slideshow-container img,
+.slideshow img,
+.carousel img,
+.carousel-inner img,
+.carousel-item img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin-inline: auto;
+}
+
+/* Prevent horizontal overflow */
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+  .slideshow-container,
+  .slideshow,
+  .carousel,
+  .carousel-inner {
+    width: 100%;
+    max-width: 100%;
+    margin-inline: auto;
+  }
+
+  .slideshow-container img,
+  .slideshow img,
+  .carousel img,
+  .carousel-inner img,
+  .carousel-item img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .slideshow-container,
+  .slideshow,
+  .carousel {
+    padding-inline: 0;
+  }
+}
+
