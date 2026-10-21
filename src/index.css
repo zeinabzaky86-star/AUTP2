@@ -266,6 +266,11 @@ body {
   .carousel {
     padding-inline: 0;
   }
+
+  .h-\[3\.66rem\].sm\:h-\[5\.23rem\].md\:h-\[6\.27rem\].lg\:h-\[10\.14rem\].w-auto.drop-shadow-lg
+  {
+    height: 200px !important;
+  }
 }
 
 @media (max-width: 768px) {
