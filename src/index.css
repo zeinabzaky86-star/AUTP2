@@ -1,0 +1,204 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Alexandria University Technology Park Design System
+All colors inspired by Mediterranean heritage and cutting-edge innovation
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Base Mediterranean palette */
+    --background: 210 100% 99%;
+    --foreground: 220 90% 8%;
+
+    /* Card system with subtle depth */
+    --card: 210 100% 98%;
+    --card-foreground: 220 90% 12%;
+
+    --popover: 210 100% 99%;
+    --popover-foreground: 220 90% 8%;
+
+    /* Primary: Deep Mediterranean blue inspired by the sea and lighthouse */
+    --primary: 220 85% 25%;
+    --primary-foreground: 210 100% 98%;
+    --primary-glow: 195 100% 50%;
+
+    /* Secondary: Soft coastal tones */
+    --secondary: 210 45% 92%;
+    --secondary-foreground: 220 85% 25%;
+
+    /* Muted: Elegant neutrals with blue undertones */
+    --muted: 210 30% 94%;
+    --muted-foreground: 215 20% 45%;
+
+    /* Accent: Lighthouse cyan for innovation highlights */
+    --accent: 195 100% 50%;
+    --accent-foreground: 220 90% 8%;
+
+    /* Innovation gold for premium features */
+    --innovation: 45 95% 60%;
+    --innovation-foreground: 220 90% 8%;
+
+    /* Status colors */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --success: 145 60% 45%;
+    --success-foreground: 210 100% 98%;
+
+    /* Interface elements */
+    --border: 215 25% 88%;
+    --input: 215 25% 92%;
+    --ring: 195 100% 50%;
+
+    --radius: 0.75rem;
+
+    /* Mediterranean gradients */
+    --gradient-lighthouse: linear-gradient(135deg, hsl(220 85% 25%), hsl(195 100% 50%));
+    --gradient-sea: linear-gradient(180deg, hsl(195 100% 50%), hsl(220 85% 35%));
+    --gradient-sand: linear-gradient(135deg, hsl(45 95% 90%), hsl(40 85% 85%));
+    --gradient-innovation: linear-gradient(135deg, hsl(195 100% 50%), hsl(45 95% 60%));
+    
+    /* Elegant shadows */
+    --shadow-soft: 0 2px 20px -2px hsl(220 85% 25% / 0.1);
+    --shadow-medium: 0 8px 30px -4px hsl(220 85% 25% / 0.15);
+    --shadow-glow: 0 0 40px hsl(195 100% 50% / 0.3);
+    
+    /* Smooth animations */
+    --transition-smooth: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    /* Tablet-friendly spacing and touch targets */
+    --touch-target-min: 44px;
+    --tablet-spacing: 1.25rem;
+    --tablet-padding: 1.5rem;
+    
+    /* Mobile-friendly spacing and touch targets */
+    --mobile-touch-target: 48px;
+    --mobile-spacing: 1rem;
+    --mobile-padding: 1rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      'Cairo', 'Tajawal', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: direction 0.3s ease;
+  }
+}
+
+/* RTL Support */
+[dir="rtl"] {
+  direction: rtl;
+}
+
+[dir="rtl"] .rtl\:rotate-180 {
+  transform: rotate(180deg);
+}
+
+/* Professional Arabic Font Support - Cairo and Tajawal from Google Fonts */
+html[lang="ar"],
+html[lang="ar"] body,
+html[lang="ar"] * {
+  font-family: 'Tajawal', 'Cairo', 'Segoe UI', 'Tahoma', 'Arial', sans-serif;
+  font-weight: 500;
+}
+
+/* Arabic headings use Cairo for better visual impact */
+html[lang="ar"] h1,
+html[lang="ar"] h2,
+html[lang="ar"] h3,
+html[lang="ar"] h4,
+html[lang="ar"] h5,
+html[lang="ar"] h6 {
+  font-family: 'Cairo', 'Tajawal', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+/* Enhanced focus styles for better accessibility and WCAG compliance */
+*:focus-visible {
+  outline: 3px solid hsl(var(--ring));
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Ensure buttons and links have clear focus indicators */
+button:focus-visible,
+a:focus-visible,
+[role="button"]:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid hsl(var(--ring));
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px hsl(var(--ring) / 0.15);
+}
