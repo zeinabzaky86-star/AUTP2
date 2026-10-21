@@ -18,7 +18,12 @@ export default function Services() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
+ const [selectedCategories, setSelectedCategories] = useState<string[]>(
+  () => {
+    const category = new URLSearchParams(window.location.search).get('category');
+    return category ? [category] : [];
+  }
+);
   const [availability, setAvailability] = useState<string | undefined>();
   const [sortBy, setSortBy] = useState('recent');
   const [allCategories, setAllCategories] = useState<string[]>([]);
