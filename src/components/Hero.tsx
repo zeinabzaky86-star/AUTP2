@@ -16,7 +16,7 @@ const Hero = () => {
           backgroundImage: `url(${heroImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center center',
-          aspectRatio: '16/9'
+         /* aspectRatio: '16/9'*/
         }}
       >
         <img
