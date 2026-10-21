@@ -276,6 +276,13 @@ body {
   padding-top: 5% !important;
   padding-bottom: 5rem;
 }
+
+
+.p-8 {
+  padding: 5%!important;
+}
+
+  
 }
 
 @media (max-width: 768px) {
@@ -285,6 +292,18 @@ body {
     height: 240px;
     object-fit: contain;
   }
+
+
+
+   .py-20 {
+  padding-top: 5% !important;
+  padding-bottom: 5rem;
+}
+
+
+.p-8 {
+  padding: 5%!important;
+}
 }
 
 
