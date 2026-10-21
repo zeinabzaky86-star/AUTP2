@@ -115,3 +115,13 @@ body {
   }
 }
 
+
+/* Mobile */
+@media (max-width: 768px) {
+  .slideshow-image {
+    aspect-ratio: auto;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
