@@ -6,13 +6,7 @@ import { SearchAndFilters } from '@/components/services/SearchAndFilters';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, Loader2 } from 'lucide-react';
 import { Link, useSearchParams } from 'react-router-dom';
-const [searchParams] = useSearchParams();
 
-useEffect(() => {
-  const category = searchParams.get('category');
-
-  setSelectedCategories(category ? [category] : []);
-}, [searchParams]);
 import { useLanguage } from '@/hooks/useLanguage';
 import Header from '@/components/Header';
 
